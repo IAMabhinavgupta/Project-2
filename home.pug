@@ -1,0 +1,47 @@
+//- Here we take over 'base.pug' and here we write all thing as well as we write in 'index.js'.
+//- After that we add all 'script(java script)' and 'style (css file)' which we already made, here we only import.
+extends base.pug
+
+block scripts
+  script(src='/static/script.js')
+
+block style
+    style
+      include ../static/style.css
+
+block content
+  section#introSection
+      div WELCOME
+      div.small Join Our Technical-Group.
+
+  section#missionsection
+      h2 Our Mission
+      //- Here we add 'cards' in this section.
+      div.card 
+        h3 Perfection in technicalogy.
+        div.card-box
+            div.card-img
+                img(src="/static/img/the-road-815297__340.webp")
+            div.card-content
+                p This is the best way to learn about technology.
+      div.card 
+        h3 Technology, the way you like.
+        div.card-box
+            div.card-img
+                img(src="/static/img/the-road-815297__340.webp")
+            div.card-content
+                p This is the best way to learn about technology.
+      div.card 
+        h3 Expert teaching.
+        div.card-box
+            div.card-img
+                img(src="/static/img/the-road-815297__340.webp")
+            div.card-content
+                p This is the best way to learn about technology.
+  
+  section#sponsorssection
+      h2 Our Sponsors
+      div#sponsors
+          img(src="/static/img/613-6131136_2nd-convocation-ceremony-dit-university-dehradun-logo-hd.png", alt="Dit Logo",class="spImage")
+          img(src="/static/img/Skype-Logo.png", alt="Skype Logo",class="spImage")
+          img(src="/static/img/Facebook-logo-3d-button-social-media-png-3.png", alt="Skype Logo",class="spImage")

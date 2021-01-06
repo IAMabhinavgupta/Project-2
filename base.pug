@@ -1,0 +1,29 @@
+//- Here we do 'template inheritance'.
+//- This file we make (including - base.pug , contact.pug , home.pug ) only as a seperate all over (like - index.pug & style.pug).
+//- These file (including - base.pug , contact.pug , home.pug ) is also work as (like - index.pug & style.pug).
+//- We have just change in 'app.js' in ENDPOINT from 'index.js' to 'home.js' where all our file are saved.
+
+//- *If we remove (including - base.pug , contact.pug , home.pug ), and run only index.js in app.js ,then also our program run fine.
+
+doctype html
+html
+  head
+    title The Sky
+    block scripts
+    block style
+    
+  body
+    nav#navbar
+      ul 
+        div#logo
+            img(src="/static/img/coollogo_com-9340303.png")
+            | Abhinav
+        li #[a(href="/") Home]
+        li #[a(href="/") About-Us]
+        li #[a(href="/contact") Contact-Us]
+        li #[a(href="/") Services]
+        li #[a(href="/") Technical-News]
+        li #[a(href="/") Learn-Technology]
+    block content
+    footer#footer
+        | Copyright 2019 Reserved by Abhinav Kumar Gupta
